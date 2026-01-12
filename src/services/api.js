@@ -5,7 +5,8 @@ import axios from "axios";
  * Centralized API calls for the Google Drive Clone
  */
 
-const API_BASE_URL = "/api";
+// Use environment variable or fallback to deployed backend
+const API_BASE_URL = import.meta.env.VITE_API_URL || "https://google-drive-backend-5qe5.onrender.com/api";
 
 const api = axios.create({
   baseURL: API_BASE_URL,
